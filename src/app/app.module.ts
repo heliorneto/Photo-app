@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { PhotoModule } from './photos/photo.module'
+import { AppRoutingModule } from './app.routing.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { PhotoModule } from './photos/photo.module'
   ],
   imports: [
     BrowserModule,
-    PhotoModule
+    PhotoModule,
+    AppRoutingModule,
+    ErrorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
