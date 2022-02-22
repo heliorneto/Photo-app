@@ -4,9 +4,10 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
+import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 
 const routes: Routes = [
-    {path: 'pics/:userName', component: PhotoListComponent},
+    {path: 'pics/:userName', component: PhotoListComponent, resolve: {photos: PhotoListResolver}},
     {path: 'form', component: PhotoFormComponent},
     {path: '**', component: NotFoundComponent}
 ]
